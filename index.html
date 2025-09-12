@@ -121,58 +121,93 @@
       </section>
 
       <!-- Portfolio -->
-      <section id="portfolio" class="py-10 px-6 bg-yellow-400">
+      <section id="portfolio" class="py-16 px-6 bg-yellow-400">
         <div class="max-w-7xl mx-auto">
-          <h2 class="text-2xl font-bold mb-4 text-center">Portfolio</h2>
-          <div class="grid md:grid-cols-3 gap-4 items-center py-10">
-            <img src="asset/website-project.webp" alt="Website Projects" class="mb-2 h-120 rounded" />
-            <img src="asset/ui-ux-project.webp" alt="Mobile App" class="mb-2 h-120 rounded" />
-            <img src="asset/design-project.webp" alt="Tech Consultancy" class="mb-2 h-120 rounded" />
+          <h2 class="text-3xl font-bold mb-10 text-center text-black">Portfolio</h2>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <!-- Project Card 1 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+              <img src="asset/website-project.webp" alt="Website Projects" class="w-full h-64 object-cover" />
+              <div class="p-4">
+                <h3 class="text-lg font-semibold text-yellow-500">Website Projects</h3>
+                <p class="text-sm text-gray-700 mt-2">Desain dan pengembangan situs web interaktif untuk berbagai kebutuhan bisnis dan edukasi.</p>
+              </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+              <img src="asset/ui-ux-project.webp" alt="Mobile App" class="w-full h-64 object-cover" />
+              <div class="p-4">
+                <h3 class="text-lg font-semibold text-yellow-500">Mobile App UI/UX</h3>
+                <p class="text-sm text-gray-700 mt-2">Rancangan antarmuka dan pengalaman pengguna untuk aplikasi mobile yang intuitif dan modern.</p>
+              </div>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+              <img src="asset/design-project.webp" alt="Tech Consultancy" class="w-full h-64 object-cover" />
+              <div class="p-4">
+                <h3 class="text-lg font-semibold text-yellow-500">Tech Consultancy</h3>
+                <p class="text-sm text-gray-700 mt-2">Solusi teknologi dan konsultasi desain untuk mendukung transformasi digital klien kami.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- Message Us -->
-      <section id="message" class="bg-black text-white py-10 px-6">
+      <section id="message" class="bg-black text-white py-16 px-6">
         <div class="max-w-7xl mx-auto">
-          <h2 class="text-2xl font-bold mb-4 text-center">Message Us</h2>
+          <h2 class="text-3xl font-bold mb-8 text-center text-yellow-400">Message Us</h2>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-20 py-10">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
             <!-- Form -->
-            <form id="messageForm" class="flex flex-col gap-4">
-              <label>
-                Nama:
-                <input type="text" name="name" required class="w-full border px-3 py-2 rounded text-black" />
-              </label>
-
-              <label>
-                Tanggal Lahir:
-                <input type="date" name="birthdate" required class="w-full border px-3 py-2 rounded text-black" />
-              </label>
-
-              <label>Jenis Kelamin:</label>
-              <div class="flex gap-4 text-sm">
-                <label><input type="radio" name="gender" value="Laki-Laki" /> Laki-Laki</label>
-                <label><input type="radio" name="gender" value="Perempuan" /> Perempuan</label>
+            <form id="messageForm" class="flex flex-col gap-6 bg-gray-900 p-6 rounded-lg shadow-lg">
+              <div>
+                <label for="name" class="block text-sm font-semibold mb-1 text-yellow-400">Nama</label>
+                <input type="text" name="name" id="name" required class="w-full px-4 py-2 rounded bg-white text-black border border-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400" />
               </div>
 
-              <label>
-                Pesan:
-                <textarea name="message" rows="4" required class="w-full border px-3 py-2 rounded text-black"></textarea>
-              </label>
+              <div>
+                <label for="birthdate" class="block text-sm font-semibold mb-1 text-yellow-400">Tanggal Lahir</label>
+                <input type="date" name="birthdate" id="birthdate" required class="w-full px-4 py-2 rounded bg-white text-black border border-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+              </div>
 
-              <button class="border border-yellow-400 rounded hover:bg-yellow-400 hover:text-black text-yellow-400 focus:outline-2 focus:outline-offset-2 focus:outline-gray-500 active:bg-violet-700 py-2">Save changes</button>
+              <div>
+                <span class="block text-sm font-semibold mb-1 text-yellow-400">Jenis Kelamin</span>
+                <div class="flex gap-6 text-sm text-white">
+                  <label class="flex items-center gap-2">
+                    <input type="radio" name="gender" value="Laki-Laki" class="accent-yellow-400" />
+                    Laki-Laki
+                  </label>
+                  <label class="flex items-center gap-2">
+                    <input type="radio" name="gender" value="Perempuan" class="accent-yellow-400" />
+                    Perempuan
+                  </label>
+                </div>
+              </div>
+
+              <div>
+                <label for="message" class="block text-sm font-semibold mb-1 text-yellow-400">Pesan</label>
+                <textarea name="message" id="message" rows="4" required class="w-full px-4 py-2 rounded bg-white text-black border border-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400"></textarea>
+              </div>
+
+              <button class="bg-yellow-400 text-black font-semibold py-2 rounded hover:bg-yellow-300 transition duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-500">Kirim Pesan</button>
             </form>
 
             <!-- Info Box -->
-            <div id="infoBox" class="border p-4 rounded bg-white text-sm leading-relaxed text-yellow-400">
-              <div class="mb-2 font-bold">Current time :</div>
-              <div id="currentTime" class="mb-4">Loading...</div>
-              <div>
-                <b>Nama:</b> - <br />
-                <b>Tanggal Lahir:</b> - <br />
-                <b>Jenis Kelamin:</b> - <br />
-                <b>Pesan:</b> -
+            <div id="infoBox" class="bg-gray-900 p-6 rounded-lg shadow-lg border border-yellow-400 text-yellow-300 text-sm leading-relaxed">
+              <div class="mb-4">
+                <h3 class="text-lg font-bold text-yellow-400">Current Time</h3>
+                <div id="currentTime" class="mt-1 text-white">Loading...</div>
+              </div>
+
+              <div class="space-y-2">
+                <p><span class="font-semibold text-white">Nama:</span> -</p>
+                <p><span class="font-semibold text-white">Tanggal Lahir:</span> -</p>
+                <p><span class="font-semibold text-white">Jenis Kelamin:</span> -</p>
+                <p><span class="font-semibold text-white">Pesan:</span> -</p>
               </div>
             </div>
           </div>
@@ -192,6 +227,6 @@
     </div>
 
     <!-- Optional JavaScript -->
-    <!-- <script src="js/script.js"></script> -->
+    <script src="js/script.js"></script>
   </body>
 </html>
