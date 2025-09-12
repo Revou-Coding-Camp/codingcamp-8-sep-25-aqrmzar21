@@ -55,8 +55,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // Sapa nama pengguna lewat prompt
   const welcomeName = prompt("Masukkan nama Anda:");
   const nameTarget = document.getElementById("welcomeName");
+  const sapa = document.getElementById("greetings");
   if (nameTarget) {
-    nameTarget.textContent = welcomeName || "Pengunjung";
+    const finalName = welcomeName || "Pengunjung";
+    sapa.innerText = "";
+    typeWriterLoop(nameTarget, finalName);
   }
 });
 
@@ -66,3 +69,26 @@ const mobileMenu = document.getElementById("mobile-menu");
 toggleBtn.addEventListener("click", () => {
   mobileMenu.classList.toggle("hidden");
 });
+
+// Fungsi animasi pengetikan tak terbatas
+function typeWriterLoop(element, text, speed = 150) {
+  let index = 0;
+
+  function type() {
+    element.textContent = text.slice(0, index);
+    index++;
+
+    if (index > text.length) {
+      setTimeout(() => {
+        index = 0;
+        type();
+      }, 1000); // jeda sebelum mengulang
+    } else {
+      setTimeout(type, speed);
+    }
+  }
+
+  type();
+}
+
+
