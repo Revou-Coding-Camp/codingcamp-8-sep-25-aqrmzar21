@@ -36,7 +36,7 @@ Selamat datang di repositori **AIM (Academy of Innovation & Media)** — sebuah 
 
 1. Clone repositori ini:
    ```bash
-   git clone https://github.com/username/aim-web-profile.git
+   git clone https://github.com/Revou-Coding-Camp/codingcamp-8-sep-25-aqrmzar21.git
 
 2. 	Buka  di browser favoritmu.
 3. 	Nikmati pengalaman interaktif dan desain yang responsif!

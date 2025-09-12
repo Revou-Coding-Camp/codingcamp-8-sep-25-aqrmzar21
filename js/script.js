@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
   updateTime();
 
   // Sapa nama pengguna lewat prompt + animasi ketik sekali + kedip 5 menit
-  // const welcomeName = prompt("Masukkan nama Anda:");
+  const welcomeName = prompt("Masukkan nama Anda:");
   const nameTarget = document.getElementById("welcomeName");
   const sapa = document.getElementById("greetings");
 
