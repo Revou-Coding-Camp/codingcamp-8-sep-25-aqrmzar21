@@ -75,24 +75,27 @@
 
       <!-- Home -->
       <section id="home" class="px-6 py-10 text-center bg-yellow-400">
-        <h1 class="text-2xl font-bold mb-2">Hi <span id="welcomeName">Pengunjung</span>, Welcome To Our Website!</h1>
-        <p class="text-lg text-gray-600">This is our first website project using HTML, CSS, and JavaScript.</p>
+        <h1 class="text-2xl font-bold mb-2">Hello <span class="font-semibold text-white text-3xl" id="welcomeName">Pengunjung</span></h1>
+        <p class="text-lg text-gray-600">Welcome To Our Website! We are a team of passionate individuals dedicated to creating exceptional digital experiences.</p>
       </section>
 
       <!-- Profile -->
-      <section id="profile" class="bg-gray-900 text-white font-sans space-y-50 py-10 px-6">
+      <section id="profile" class="bg-gray-900 text-white font-sans py-16 px-6">
         <div class="max-w-7xl mx-auto">
-          <h2 class="text-2xl font-bold mb-4 text-center">Our Profile</h2>
-          <div class="grid md:grid-cols-2 gap-6 items-center">
-            <div>
-              <!-- <img src="https://picsum.photos/200/80" alt="Company Banner" class="w-full rounded shadow" /> -->
-              <img src="asset/mylogo.webp" alt="Company Banner" class="h-50 rounded shadow img-thumb" />
+          <h2 class="text-3xl font-bold mb-10 text-center text-yellow-400">Our Profile</h2>
+
+          <div class="grid md:grid-cols-2 gap-10 items-center">
+            <!-- Logo / Banner -->
+            <div class="flex justify-center">
+              <img src="asset/mylogo.webp" alt="Company Banner" class="w-60 h-auto rounded-lg img-thumb filter invert sepia hue-rotate-[40deg] saturate-[500%]" />
             </div>
-            <div class="space-y-6 text-white">
+
+            <!-- Profile Content -->
+            <div class="space-y-8">
               <!-- About Us -->
               <div>
-                <h2 class="text-lg font-bold text-yellow-400">About Us</h2>
-                <p class="mt-2 text-sm leading-relaxed">
+                <h3 class="text-xl font-bold text-yellow-400">About Us</h3>
+                <p class="mt-2 text-sm leading-relaxed text-gray-200">
                   AIM (Academy of Innovation & Media) adalah platform pembelajaran yang berfokus pada pengembangan keterampilan di bidang media dan teknologi. Kami menyediakan berbagai kursus mulai dari desain grafis, aplikasi Microsoft,
                   hingga pemrograman, yang dirancang untuk membekali peserta dengan kemampuan praktis dan relevan di era digital.
                 </p>
@@ -100,14 +103,14 @@
 
               <!-- Vision -->
               <div>
-                <h2 class="text-lg font-bold text-yellow-400">Vision</h2>
-                <p class="mt-2 text-sm leading-relaxed">Menjadi pusat edukasi media teknologi terdepan di Indonesia yang mendorong transformasi digital melalui pembelajaran yang inklusif, inovatif, dan berdampak.</p>
+                <h3 class="text-xl font-bold text-yellow-400">Vision</h3>
+                <p class="mt-2 text-sm leading-relaxed text-gray-200">Menjadi pusat edukasi media teknologi terdepan di Indonesia yang mendorong transformasi digital melalui pembelajaran yang inklusif, inovatif, dan berdampak.</p>
               </div>
 
               <!-- Mission -->
               <div>
-                <h2 class="text-lg font-bold text-yellow-400">Mission</h2>
-                <ul class="mt-2 list-disc list-inside text-sm leading-relaxed space-y-1">
+                <h3 class="text-xl font-bold text-yellow-400">Mission</h3>
+                <ul class="mt-2 list-disc list-inside text-sm leading-relaxed text-gray-200 space-y-2">
                   <li>Menyediakan kursus berkualitas tinggi yang mudah diakses oleh semua kalangan.</li>
                   <li>Mendorong kreativitas dan inovasi melalui pembelajaran berbasis proyek nyata.</li>
                   <li>Menghubungkan peserta didik dengan tren dan kebutuhan industri teknologi terkini.</li>
@@ -115,7 +118,6 @@
                 </ul>
               </div>
             </div>
-            <!-- End Profile -->
           </div>
         </div>
       </section>
@@ -179,11 +181,11 @@
                 <div class="flex gap-6 text-sm text-white">
                   <label class="flex items-center gap-2">
                     <input type="radio" name="gender" value="Laki-Laki" class="accent-yellow-400" />
-                    Laki-Laki
+                    Pria
                   </label>
                   <label class="flex items-center gap-2">
                     <input type="radio" name="gender" value="Perempuan" class="accent-yellow-400" />
-                    Perempuan
+                    Wanita
                   </label>
                 </div>
               </div>
@@ -227,6 +229,6 @@
     </div>
 
     <!-- Optional JavaScript -->
-    <script src="js/script.js"></script>
+    <!-- <script src="js/script.js"></script> -->
   </body>
 </html>
