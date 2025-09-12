@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <b>Pesan</b> : ${message}
         </div>
       `;
+      form.reset();
     });
   }
 
@@ -47,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const timeEl = document.getElementById("currentTime");
     if (timeEl) {
       timeEl.textContent = timeNow;
+      timeEl.style.color = "black";
     }
   }
   setInterval(updateTime, 1000);
@@ -55,10 +57,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // Sapa nama pengguna lewat prompt
   const welcomeName = prompt("Masukkan nama Anda:");
   const nameTarget = document.getElementById("welcomeName");
-  const sapa = document.getElementById("greetings");
   if (nameTarget) {
     const finalName = welcomeName || "Pengunjung";
-    sapa.innerText = "";
     typeWriterLoop(nameTarget, finalName);
   }
 });
@@ -91,4 +91,16 @@ function typeWriterLoop(element, text, speed = 150) {
   type();
 }
 
+const yearNow = new Date().getFullYear();
+const yearTarget = document.getElementById("copyrightYear");
+if (yearTarget) {
+  yearTarget.textContent = yearNow;
+}
 
+const dateInfoTarget = document.getElementById("currentDateInfo");
+if (dateInfoTarget) {
+  const now = new Date();
+  const options = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
+  const formattedDate = now.toLocaleDateString("id-ID", options); // Bahasa Indonesia
+  dateInfoTarget.textContent = `Hari ini: ${formattedDate}`;
+}
