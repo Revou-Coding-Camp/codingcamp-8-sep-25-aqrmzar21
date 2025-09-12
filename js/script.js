@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
       infoBox.innerHTML = `
           <div class="mb-1 font-bold">Current time :</div>
           <div id="formTime" class="mb-3">${new Date().toString()}</div>
-          <div>
+          <div class="text-black">
             <b>Nama</b> : ${name}<br />
             <b>Tanggal Lahir</b> : ${formatted}<br />
             <b>Jenis Kelamin</b> : ${gender}<br />
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
           </div>
         `;
 
-      form.remove();
+      form.reset();
     });
   }
 
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
   updateTime();
 
   // Sapa nama pengguna lewat prompt + animasi ketik sekali + kedip 5 menit
-  const welcomeName = prompt("Masukkan nama Anda:");
+  // const welcomeName = prompt("Masukkan nama Anda:");
   const nameTarget = document.getElementById("welcomeName");
   const sapa = document.getElementById("greetings");
 
@@ -125,5 +125,5 @@ if (dateInfoTarget) {
   const now = new Date();
   const options = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
   const formattedDate = now.toLocaleDateString("id-ID", options);
-  dateInfoTarget.textContent = `Hari ini: ${formattedDate}`;
+  dateInfoTarget.textContent = `${formattedDate}`;
 }
